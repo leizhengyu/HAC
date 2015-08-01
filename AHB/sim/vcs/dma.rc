@@ -1,0 +1,162 @@
+Magic 271485
+Revision 2008.04
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 0 1278 776 282 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/bb/DownLoad/amba_mini/sim/vcs/wave.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 3
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 221815.343162 221907.189761
+cursor 221851.81909405917
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name
+; visible top row signal index
+top 5
+; marker line index
+markerPos 23
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+addGroup "G2"
+activeDirFile "" "/home/bb/DownLoad/amba_mini/sim/vcs/wave.fsdb"
+addSignal -h 15 /sys_tb/dma1/Request
+addSignal -h 15 -holdScope Write
+addSignal -h 15 -holdScope HLOCK
+addSignal -h 15 -holdScope HBUSREQ
+addSignal -h 15 -holdScope HCLK
+addSignal -h 15 -holdScope HRST_N
+addSignal -h 15 -holdScope HGRANT
+addSignal -h 15 -holdScope HREADY
+addSignal -h 15 -UNSIGNED -HEX -holdScope HADDR[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HSIZE[2:0]
+addSignal -h 15 -holdScope HWRITE
+addSignal -h 15 -UNSIGNED -HEX -holdScope HTRANS[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HBURST[2:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HWDATA[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HPROT[3:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HRDATA[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HRESP[1:0]
+addSignal -h 15 -holdScope AddrPhase
+addSignal -h 15 -holdScope DataPhase
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/amba_ahb/u_arbiter/HMASTER[3:0]
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/amba_ahb/u_mux/iHADDR[31:0]
+addSignal -h 15 -holdScope iHSEL[0]
+addGroup "G9"
+addSignal -h 15 /sys_tb/slv0/HCLK
+addSignal -h 15 -holdScope HRST_N
+addSignal -h 15 -holdScope HREADY
+addSignal -h 15 -holdScope HSEL
+addSignal -h 15 -UNSIGNED -HEX -holdScope HADDR[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HSIZE[2:0]
+addSignal -h 15 -holdScope HWRITE
+addSignal -h 15 -UNSIGNED -HEX -holdScope HTRANS[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HBURST[2:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HWDATA[31:0]
+addGroup "G7"
+addSignal -h 15 /sys_tb/slv5/HCLK
+addSignal -h 15 -holdScope HRST_N
+addSignal -h 15 -holdScope HREADY
+addSignal -h 15 -holdScope HSEL
+addSignal -h 15 -UNSIGNED -HEX -holdScope HADDR[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HSIZE[2:0]
+addSignal -h 15 -holdScope HWRITE
+addSignal -h 15 -UNSIGNED -HEX -holdScope HTRANS[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HBURST[2:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HWDATA[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HRDATA[31:0]
+addSignal -h 15 -holdScope HREADY_O
+addSignal -h 15 -UNSIGNED -HEX -holdScope SD_CS[4:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope SD_NS[4:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope command[2:0]
+addGroup "G3"
+addSignal -h 15 /sys_tb/dma_ctrl/RST_N
+addSignal -h 15 -holdScope PSEL
+addSignal -h 15 -holdScope PENABLE
+addSignal -h 15 -holdScope PWRITE
+addSignal -h 15 -UNSIGNED -HEX -holdScope PADDR[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope PWDATA[31:0]
+addGroup "G4"
+addSignal -h 15 /sys_tb/dma_ctrl/StartIdle
+addSignal -h 15 -holdScope StartRead
+addSignal -h 15 -holdScope StartWrite
+addSignal -h 15 -holdScope StateIdle
+addSignal -h 15 -holdScope StateRead
+addSignal -h 15 -holdScope StateWrite
+addGroup "G5"
+addSignal -h 15 /sys_tb/dma_ctrl/DmaBusy
+addSignal -h 15 -holdScope DmaLock
+addSignal -h 15 -holdScope Start
+addSignal -h 15 -holdScope WR
+addSignal -h 15 -UNSIGNED -HEX -holdScope WRAddr[31:0]
+addSignal -h 15 -holdScope WRBurst
+addSignal -h 15 -UNSIGNED -HEX -holdScope WRLen[9:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope WRSize[2:0]
+addSignal -h 15 -holdScope DoutVld
+addSignal -h 15 -UNSIGNED -HEX -holdScope Dout[31:0]
+addGroup "G6"
+addSignal -h 15 /sys_tb/dma_ctrl/ReadEn
+addSignal -h 15 -UNSIGNED -HEX -holdScope Din[31:0]
+addGroup "G8"
+addSignal -h 15 /sys_tb/slv0/ram_sel
+addSignal -h 15 -UNSIGNED -HEX -holdScope ram_wr[3:0]
+addSignal -h 15 -holdScope ram_wr[3]
+addSignal -h 15 -holdScope ram_wr[2]
+addSignal -h 15 -holdScope ram_wr[1]
+addSignal -h 15 -holdScope ram_wr[0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope ramaddr[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope ramdatai[31:0]
+addGroup "G10"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/bb/DownLoad/amba_mini/sim/vcs/wave.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/sys_tb"
+"/sys_tb/amba_ahb"
+
+SCOPE_LIST_BEGIN
+"/sys_tb"
+"/sys_tb/u_dma_if"
+"/sys_tb/dma1"
+"/sys_tb/dma_ctrl"
+"/sys_tb/slv5"
+"/sys_tb/slv0"
+"/sys_tb/amba_ahb/u_mux"
+"/sys_tb/amba_ahb/u_arbiter"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+

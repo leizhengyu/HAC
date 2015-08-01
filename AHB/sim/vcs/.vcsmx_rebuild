@@ -1,0 +1,1 @@
+vcs "-timescale=1ns/1ns" "+v2k" "+notimingcheck" "-P" "/opt/CAD/Verdi2008/share/PLI/vcs/LINUX/debussy.tab" "/opt/CAD/Verdi2008/share/PLI/vcs/LINUX/pli.a" "+lint=PCWM" "-f" "vlog.txt"

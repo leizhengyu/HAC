@@ -1,0 +1,565 @@
+Magic 271485
+Revision 2008.04
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 0 1278 776 331 82
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/bb/DownLoad/amba_mini/sim/vcs/wave.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 3
+
+; windowTimeUnit is used for zoom, cursor & marker
+windowTimeUnit 1ns
+
+; waveform viewport range
+zoom 140320.073623 151881.336637 1n
+cursor 147476.27311389844
+marker 159.37371114230
+; user define markers
+; userMarker time_pos marker_name
+userMarker 11096.301000 cc
+
+; visible top row signal index
+top 27
+; marker line index
+markerPos 155
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/bb/DownLoad/amba_mini/sim/vcs/wave.fsdb"
+addSignal -h 15 /sys_tb/amba_ahb/u_arbiter/HCLK
+addSignal -h 15 -holdScope HRST_N
+addSignal -h 15 -holdScope HLOCK
+addSignal -h 15 -holdScope HBUSREQ[3]
+addSignal -h 15 -holdScope HBUSREQ[2]
+addSignal -h 15 -holdScope HBUSREQ[1]
+addSignal -h 15 -holdScope HBUSREQ[0]
+addSignal -h 15 -holdScope HREADY
+addSignal -h 15 -UNSIGNED -HEX -holdScope HTRANS[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HBURST[2:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope CurrentMaster[3:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope NextMaster[3:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HRESP[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HSPLIT[15:0]
+addGroup "G12"
+addSignal -h 15 /sys_tb/amba_ahb/u_arbiter/BusreqNoMask[3]
+addSignal -h 15 -holdScope BusreqNoMask[2]
+addSignal -h 15 -holdScope BusreqNoMask[1]
+addSignal -h 15 -holdScope BusreqNoMask[0]
+addSignal -h 15 -holdScope DefaultMst
+addSignal -h 15 -holdScope DefaultSlv
+addSignal -h 15 -holdScope HlockAddr
+addSignal -h 15 -holdScope Deadlock
+addSignal -h 15 -holdScope RequireArbiter
+addGroup "G2"
+addSignal -h 15 /sys_tb/amba_ahb/u_arbiter/HGRANT[3]
+addSignal -h 15 -holdScope HGRANT[2]
+addSignal -h 15 -holdScope HGRANT[1]
+addSignal -h 15 -holdScope HGRANT[0]
+addSignal -h 15 -holdScope HMASTERLOCK
+addSignal -h 15 -UNSIGNED -HEX -holdScope HMASTER[3:0]
+addGroup "G3"
+addSignal -h 15 /sys_tb/mst3/CLK
+addGroup "G15"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/dma2/iAddr[31:0]
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/mst2/Size[2:0]
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/uu_addr[31:0]
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/mst2/Din[31:0]
+addSignal -h 15 -holdScope Start
+addSignal -h 15 -holdScope DoutVld
+addSignal -h 15 -UNSIGNED -HEX -holdScope Dout[31:0]
+addSignal -h 15 -holdScope Done
+addSignal -h 15 -holdScope ReadEn
+addSignal -h 15 /sys_tb/dma2/Request
+addSignal -h 15 /sys_tb/mst2/CLK
+addSignal -h 15 -holdScope Okay
+addSignal -h 15 /sys_tb/dma2/Grant
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/mst2/Addr[31:0]
+addSignal -h 15 /sys_tb/dma2/HBUSREQ
+addSignal -h 15 -holdScope HGRANT
+addSignal -h 15 -holdScope HREADY
+addSignal -h 15 -UNSIGNED -HEX -holdScope HRESP[1:0]
+addSignal -h 15 -holdScope HGrantReg
+addSignal -h 15 -holdScope iActive
+addSignal -h 15 -UNSIGNED -HEX -holdScope HSIZE[2:0]
+addSignal -h 15 -holdScope HWRITE
+addSignal -h 15 -UNSIGNED -HEX -holdScope HTRANS[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HBURST[2:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HADDR[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HWDATA[31:0]
+addGroup "G8"
+addSignal -h 15 /sys_tb/dma1/Grant
+addSignal -h 15 -holdScope Request
+addSignal -h 15 -holdScope Okay
+addSignal -h 15 -holdScope HBUSREQ
+addSignal -h 15 -holdScope HGRANT
+addSignal -h 15 -holdScope HREADY
+addSignal -h 15 -UNSIGNED -HEX -holdScope HRESP[1:0]
+addSignal -h 15 -holdScope AddrPhase
+addSignal -h 15 -holdScope DataPhase
+addSignal -h 15 -UNSIGNED -HEX -holdScope HADDR[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HSIZE[2:0]
+addSignal -h 15 -holdScope HWRITE
+addSignal -h 15 -UNSIGNED -HEX -holdScope HTRANS[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HBURST[2:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HWDATA[31:0]
+addGroup "G9"
+addSignal -h 15 /sys_tb/mst0/Start
+addSignal -h 15 /sys_tb/dma0/HCLK
+addSignal -h 15 /sys_tb/mst0/Done
+addSignal -h 15 -holdScope DoutVld
+addSignal -h 15 -UNSIGNED -HEX -holdScope Dout[31:0]
+addSignal -h 15 -holdScope ReadEn
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/mst0_wr/i
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/mst0/DataIn[31:0]
+addSignal -h 15 /sys_tb/dma0/Grant
+addSignal -h 15 -holdScope Request
+addSignal -h 15 -holdScope Okay
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/mst0/Addr[31:0]
+addSignal -h 15 /sys_tb/dma0/HBUSREQ
+addSignal -h 15 -holdScope HGRANT
+addSignal -h 15 -holdScope HREADY
+addSignal -h 15 -holdScope RetryReg
+addSignal -h 15 -holdScope HGrantReg
+addSignal -h 15 -holdScope iActive
+addSignal -h 15 -UNSIGNED -HEX -holdScope HRESP[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HADDR[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HSIZE[2:0]
+addSignal -h 15 -holdScope HWRITE
+addSignal -h 15 -UNSIGNED -HEX -holdScope HTRANS[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HBURST[2:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HWDATA[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HRDATA[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope DataOut[31:0]
+addGroup "G13"
+addSignal -h 15 /sys_tb/amba_ahb/HCLK
+addSignal -h 15 -holdScope HGRANT[3]
+addSignal -h 15 -holdScope HGRANT[2]
+addSignal -h 15 -holdScope HGRANT[1]
+addSignal -h 15 -holdScope HGRANT[0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HMASTER[3:0]
+addSignal -h 15 -holdScope HSEL[3]
+addSignal -h 15 -holdScope HSEL[2]
+addSignal -h 15 -holdScope HSEL[1]
+addSignal -h 15 -holdScope HSEL[0]
+addSignal -h 15 -holdScope HREADY
+addSignal -h 15 -UNSIGNED -HEX -holdScope HADDR[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HSIZE[2:0]
+addSignal -h 15 -holdScope HWRITE
+addSignal -h 15 -UNSIGNED -HEX -holdScope HTRANS[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HBURST[2:0]
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/amba_ahb/u_arbiter/Beat[3:0]
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/amba_ahb/HPROT[3:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HRESP[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HWDATA[31:0]
+addGroup "G14"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/amba_ahb/HRDATA[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HSPLIT[15:0]
+addSignal -h 15 -holdScope HMASTERLOCK
+addGroup "G11"
+addSignal -h 15 /sys_tb/slv0/HREADY
+addSignal -h 15 -holdScope HSEL
+addSignal -h 15 -UNSIGNED -HEX -holdScope HTRANS[1:0]
+addSignal -h 15 -holdScope hwrite_r
+addSignal -h 15 -holdScope hsel
+addSignal -h 15 -holdScope HWRITE
+addSignal -h 15 -UNSIGNED -HEX -holdScope HSIZE[2:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope ram_rd[3:0]
+addSignal -h 15 -holdScope HADDR[1]
+addSignal -h 15 -holdScope HADDR[0]
+addSignal -h 15 -holdScope ram_rd[3]
+addSignal -h 15 -holdScope ram_rd[2]
+addSignal -h 15 -holdScope ram_rd[1]
+addSignal -h 15 -holdScope ram_rd[0]
+addSignal -h 15 -holdScope ram_sel
+addSignal -h 15 -UNSIGNED -HEX -holdScope ram_wr[3:0]
+addSignal -h 15 -holdScope ram_wr[3]
+addSignal -h 15 -holdScope ram_wr[2]
+addSignal -h 15 -holdScope ram_wr[1]
+addSignal -h 15 -holdScope ram_wr[0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope ramaddr[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HWDATA[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HRDATA[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope ramdatao[31:0]
+addGroup "G17"
+addSignal -h 15 /sys_tb/slv2/ram_sel
+addSignal -h 15 -UNSIGNED -HEX -holdScope ram_rd[3:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope ram_wr[3:0]
+addSignal -h 15 -holdScope ram_wr[3]
+addSignal -h 15 -holdScope ram_wr[2]
+addSignal -h 15 -holdScope ram_wr[1]
+addSignal -h 15 -holdScope ram_wr[0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope ramaddr[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HWDATA[31:0]
+addGroup "G16"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/amba_ahb/u_mux/HSPLIT[15:0]
+addGroup "G18"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/amba_ahb/u_mux/DEF_HRESP[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HRESP[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope S0_HRESP[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope S1_HRESP[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope S2_HRESP[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope S3_HRESP[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope iHRESP[1:0]
+addGroup "G19"
+addSignal -h 15 /sys_tb/amba_ahb/u_mux/default_slaver/HCLK
+addSignal -h 15 -holdScope HRST_N
+addSignal -h 15 -UNSIGNED -HEX -holdScope HTRANS[1:0]
+addGroup "G20"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/amba_ahb/u_mux/DEF_HSPLIT[15:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HSPLIT[15:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope S0_HSPLIT[15:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope S1_HSPLIT[15:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope S2_HSPLIT[15:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope S3_HSPLIT[15:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope iHSPLIT[15:0]
+addGroup "G21"
+addSignal -h 15 /sys_tb/slv1/HCLK
+addSignal -h 15 -UNSIGNED -HEX -holdScope HADDR[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HBURST[2:0]
+addSignal -h 15 -holdScope HREADY
+addSignal -h 15 -holdScope HRST_N
+addSignal -h 15 -holdScope HSEL
+addSignal -h 15 -UNSIGNED -HEX -holdScope HSIZE[2:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HTRANS[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HWDATA[31:0]
+addSignal -h 15 -holdScope HWRITE
+addGroup "G22"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/slv1/iHRDATA[31:0]
+addSignal -h 15 -holdScope iHREADY
+addSignal -h 15 -UNSIGNED -HEX -holdScope iHRESP[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope iHSPLIT[15:0]
+addGroup "G23"
+addSignal -h 15 /sys_tb/slv3/HCLK
+addSignal -h 15 -holdScope HRST_N
+addSignal -h 15 -holdScope HREADY
+addSignal -h 15 -holdScope HSEL
+addSignal -h 15 -UNSIGNED -HEX -holdScope HADDR[31:0]
+addSignal -h 15 -holdScope HWRITE
+addSignal -h 15 -UNSIGNED -HEX -holdScope HTRANS[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HWDATA[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope PRDATA[31:0]
+addGroup "G24"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/slv3/HRDATA[31:0]
+addSignal -h 15 -holdScope HREADY_o
+addSignal -h 15 -UNSIGNED -HEX -holdScope HRESP[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HSPLIT[15:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope PADDR[31:0]
+addSignal -h 15 -holdScope PSEL[4]
+addSignal -h 15 -holdScope PSEL[3]
+addSignal -h 15 -holdScope PSEL[2]
+addSignal -h 15 -holdScope PSEL[1]
+addSignal -h 15 -holdScope PSEL[0]
+addSignal -h 15 -holdScope PENABLE
+addSignal -h 15 -UNSIGNED -HEX -holdScope PWDATA[31:0]
+addSignal -h 15 -holdScope PWRITE
+addGroup "G25"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/slv3/addr_r[31:0]
+addSignal -h 15 -holdScope ready_en
+addSignal -h 15 -holdScope setup_en
+addSignal -h 15 -holdScope enable_en
+addSignal -h 15 -holdScope valid_wr
+addSignal -h 15 -holdScope wr_r
+addSignal -h 15 -holdScope write_en
+addSignal -h 15 -UNSIGNED -HEX -holdScope CS[3:0]
+addSignal -h 15 -UNSIGNED -BIN -holdScope NS[3:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope addr_r[31:0]
+addGroup "G26"
+addSignal -h 15 /sys_tb/apb_slv1/PCLK
+addSignal -h 15 -holdScope PRST_N
+addSignal -h 15 -holdScope PSEL
+addSignal -h 15 -holdScope PENABLE
+addSignal -h 15 -UNSIGNED -HEX -holdScope PADDR[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope PWDATA[31:0]
+addSignal -h 15 -holdScope PWRITE
+addSignal -h 15 -UNSIGNED -HEX -holdScope PRDATA[31:0]
+addGroup "G27"
+addSignal -h 15 /sys_tb/u_apb_mux/PCLK
+addSignal -h 15 -holdScope PRST_N
+addSignal -h 15 -holdScope PSEL[3]
+addSignal -h 15 -holdScope PSEL[2]
+addSignal -h 15 -holdScope PSEL[1]
+addSignal -h 15 -holdScope PSEL[0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope PRDATA[31:0]
+addGroup "G28"
+addSignal -h 15 /sys_tb/apb_slv2/ExtClk_i
+addSignal -h 15 -holdScope PCLK
+addSignal -h 15 -holdScope PRST_N
+addSignal -h 15 -holdScope PSEL
+addSignal -h 15 -holdScope PENABLE
+addSignal -h 15 -UNSIGNED -HEX -holdScope PADDR[31:0]
+addSignal -h 15 -holdScope PWRITE
+addSignal -h 15 -UNSIGNED -HEX -holdScope PWDATA[31:0]
+addSignal -c ID_YELLOW5 -ls solid -lw 1 -h 15 -holdScope Rxd_i
+addGroup "G29"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/apb_slv2/PRDATA[31:0]
+addSignal -c ID_PURPLE5 -ls solid -lw 1 -h 15 -holdScope IRQ
+addSignal -h 15 -holdScope Txd_o
+addGroup "G30"
+addSignal -h 15 /sys_tb/apb_slv2/PE
+addSignal -h 15 -holdScope RE
+addSignal -h 15 -UNSIGNED -HEX -holdScope SCALER[31:0]
+addGroup "G31"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/apb_slv2/TCnt[3:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope RCnt[3:0]
+addGroup "G32"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/apb_slv2/RRAddr[2:0]
+addGroup "G33"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/GpioIn[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope GpioOEn[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope GpioOut[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope Gpio[31:0]
+addGroup "G34"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/apb_slv0/GpioIn[31:0]
+addSignal -h 15 -holdScope PCLK
+addSignal -h 15 -holdScope PRST_N
+addSignal -h 15 -holdScope PSEL
+addSignal -h 15 -holdScope PENABLE
+addSignal -h 15 -holdScope PWRITE
+addSignal -h 15 -UNSIGNED -HEX -holdScope PADDR[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope PWDATA[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope PRDATA[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope DIRREG[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope INREG[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope OUTREG[31:0]
+addGroup "G35"
+addSignal -h 15 /sys_tb/mst3/u_dcom_uart/PCLK
+addSignal -h 15 -holdScope PRST_N
+addSignal -h 15 -holdScope PSEL
+addSignal -h 15 -holdScope PENABLE
+addSignal -h 15 -holdScope PWRITE
+addSignal -h 15 -UNSIGNED -HEX -holdScope PADDR[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope PWDATA[31:0]
+addSignal -h 15 -holdScope Read
+addSignal -h 15 -UNSIGNED -HEX -holdScope DataIn[7:0]
+addSignal -h 15 -holdScope Rxd
+addSignal -h 15 -holdScope Write
+addGroup "G36"
+addSignal -c ID_YELLOW5 -ls solid -lw 1 -h 15 /sys_tb/mst3/u_dcom_uart/Txd
+addSignal -h 15 /sys_tb/apb_slv2/StartTxData
+addSignal -h 15 -holdScope StartTxIdle
+addSignal -h 15 -holdScope StartTxParity
+addSignal -h 15 -holdScope StartTxStop
+addSignal -h 15 -holdScope StateTxData
+addSignal -h 15 -holdScope StateTxIdle
+addSignal -h 15 -holdScope StateTxParity
+addSignal -h 15 -holdScope StateTxStop
+addSignal -h 15 -holdScope Txd_o
+addSignal -h 15 -holdScope Tick
+addSignal -h 15 -holdScope TxTick
+addSignal -h 15 -UNSIGNED -HEX -holdScope SCALER[31:0]
+addSignal -h 15 /sys_tb/mst3/u_dcom_uart/RE
+addSignal -h 15 -UNSIGNED -HEX -holdScope AutoStep[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope Brate[15:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope Scaler[15:0]
+addGroup "G37"
+addSignal -h 15 /sys_tb/mst3/u_dcom_uart/RxTick
+addSignal -h 15 -holdScope Tick
+addGroup "G38"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/mst3/u_dcom_uart/RxTickCnt[2:0]
+addSignal -h 15 -holdScope iRxd
+addSignal -h 15 -holdScope iRxdQ
+addGroup "G39"
+addSignal -h 15 /sys_tb/mst3/u_dcom/CLK
+addSignal -h 15 /sys_tb/mst3/u_dcom_uart/Read
+addSignal -h 15 -holdScope RxdEn
+addSignal -h 15 -holdScope StartRxIdle
+addSignal -h 15 -holdScope StartRxStart
+addSignal -h 15 -holdScope StartRxData
+addSignal -h 15 -holdScope StartRxStop
+addSignal -h 15 -holdScope StateRxIdle
+addSignal -h 15 -holdScope StateRxStart
+addSignal -h 15 -holdScope StateRxData
+addSignal -h 15 -holdScope StateRxStop
+addGroup "G40"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/mst3/u_dcom_uart/RHold[7:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope RShift[7:0]
+addGroup "G41"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/mst3/u_dcom_uart/DataOut[7:0]
+addSignal -h 15 -holdScope DataReady
+addGroup "G42"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/mst3/u_dcom/DataCnt[5:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope DataLen[5:0]
+addSignal -h 15 -holdScope THEmpty
+addSignal -h 15 -holdScope iAhbWrite
+addSignal -h 15 -holdScope StartIdle
+addSignal -h 15 -holdScope StartReadAddr
+addSignal -h 15 -holdScope StartReadAhb
+addSignal -h 15 -holdScope StartReadMst
+addSignal -h 15 -holdScope StartWriteAhb
+addSignal -h 15 -holdScope StartWriteMst
+addSignal -h 15 -holdScope StateIdle
+addSignal -h 15 -holdScope StateReadAddr
+addSignal -h 15 -holdScope StateReadAhb
+addSignal -h 15 -holdScope StateReadMst
+addSignal -h 15 -holdScope StateWriteAhb
+addSignal -h 15 -holdScope StateWriteMst
+addGroup "G43"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/mst3/u_dcom/ReceiveCnt[3:0]
+addGroup "G44"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/mst3/u_dcom/iAhbAddr[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope iAhbOut[31:0]
+addSignal -h 15 -holdScope iAhbReq
+addGroup "G45"
+addSignal -h 15 /sys_tb/mst3/u_ahb_duart_mst/Burst
+addSignal -h 15 -UNSIGNED -HEX -holdScope DataIn[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope Addr[31:0]
+addSignal -h 15 -holdScope Request
+addSignal -h 15 -holdScope Write
+addGroup "G46"
+addSignal -h 15 /sys_tb/mst3/u_ahb_duart_mst/HBUSREQ
+addSignal -h 15 -holdScope HGRANT
+addSignal -h 15 -UNSIGNED -HEX -holdScope HADDR[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HSIZE[2:0]
+addSignal -h 15 -holdScope HWRITE
+addSignal -h 15 -UNSIGNED -HEX -holdScope HTRANS[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HBURST[2:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HWDATA[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HRDATA[31:0]
+addGroup "G47"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/mst3/u_ahb_duart_mst/DataOut[31:0]
+addSignal -h 15 -holdScope Okay
+addGroup "G48"
+addSignal -h 15 /sys_tb/slv4/Initialized
+addSignal -h 15 -holdScope Done
+addGroup "G49"
+addSignal -h 15 /sys_tb/slv4/HCLK
+addSignal -h 15 -holdScope HRST_N
+addSignal -h 15 -holdScope HREADY
+addSignal -h 15 -holdScope HSEL
+addSignal -h 15 -UNSIGNED -HEX -holdScope HADDR[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HSIZE[2:0]
+addSignal -h 15 -holdScope HWRITE
+addSignal -h 15 -UNSIGNED -HEX -holdScope HTRANS[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HBURST[2:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HWDATA[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HRDATA[31:0]
+addGroup "G50"
+addSignal -h 15 /sys_tb/slv4/SCK
+addSignal -h 15 -holdScope CSN
+addSignal -h 15 -holdScope MOSI
+addSignal -h 15 -holdScope MISO
+addSignal -h 15 -UNSIGNED -HEX -holdScope ReceiveReg[31:0]
+addGroup "AHB_SDRAM"
+addSignal -h 15 /sys_tb/slv5/HCLK
+addSignal -h 15 -holdScope HRST_N
+addSignal -h 15 -holdScope HREADY
+addSignal -h 15 -holdScope HSEL
+addSignal -h 15 -UNSIGNED -HEX -holdScope HADDR[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HSIZE[2:0]
+addSignal -h 15 -holdScope HWRITE
+addSignal -h 15 -UNSIGNED -HEX -holdScope HTRANS[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HBURST[2:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HWDATA[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope SDR_DATA_I[31:0]
+addGroup "G52"
+addGroup "G51"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/mst3/u_dcom/DataOut[7:0]
+addSignal -h 15 -holdScope Write
+addGroup "G53"
+addSignal -h 15 /sys_tb/mst3/u_dcom_uart/StartTxIdle
+addSignal -h 15 -holdScope StartTxData
+addSignal -h 15 -holdScope StartTxStop
+addSignal -h 15 -holdScope StateTxData
+addSignal -h 15 -holdScope StateTxIdle
+addSignal -h 15 -holdScope StateTxStop
+addSignal -h 15 -holdScope Txd
+addSignal -h 15 -UNSIGNED -HEX -holdScope TShift[10:0]
+addGroup "G54"
+addSignal -h 15 /sys_tb/slv5/HCLK
+addSignal -h 15 -holdScope HRST_N
+addSignal -h 15 -holdScope HREADY
+addSignal -h 15 -holdScope HSEL
+addSignal -h 15 -UNSIGNED -HEX -holdScope HADDR[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HSIZE[2:0]
+addSignal -h 15 -holdScope HWRITE
+addSignal -h 15 -UNSIGNED -HEX -holdScope HTRANS[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HBURST[2:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HWDATA[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope SDR_CFG[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope SDR_DATA_I[31:0]
+addGroup "G56"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/slv5/I_CS[2:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope I_NS[2:0]
+addGroup "G55"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/slv5/CM_CS[2:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope CM_NS[2:0]
+addGroup "G57"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/slv5/SD_CS[4:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope SD_NS[4:0]
+addGroup "G58"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/bb/DownLoad/amba_mini/sim/vcs/wave.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/sys_tb"
+"/sys_tb/amba_ahb/u_arbiter"
+"/sys_tb/amba_ahb/u_mux"
+"/sys_tb/dma0"
+"/sys_tb/mst3"
+
+SCOPE_LIST_BEGIN
+"/ahb_spim"
+"/mstif"
+"/sys_tb"
+"/sys_tb/amba_ahb/u_mux"
+"/sys_tb/amba_ahb/u_arbiter"
+"/sys_tb/amba_ahb/u_mux/default_slaver"
+"/sys_tb/dma1"
+"/sys_tb/dma0"
+"/sys_tb/dma2"
+"/sys_tb/dma3"
+"/sys_tb/amba_ahb"
+"/sys_tb/amba_ahb/u_arbiter/fixed_priority"
+"/sys_tb/mst0"
+"/sys_tb/mst1"
+"/sys_tb/mst2"
+"/sys_tb/mst3"
+"/sys_tb/mst0_wr"
+"/sys_tb/mst2_wr"
+"/sys_tb/mst0_read_write"
+"/sys_tb/slv0"
+"/sys_tb/slv2"
+"/sys_tb/slv1"
+"/sys_tb/slv3"
+"/sys_tb/apb_slv1"
+"/sys_tb/u_apb_mux"
+"/sys_tb/apb_slv2"
+"/sys_tb/apb_slv0"
+"/sys_tb/mst3/u_dcom_uart"
+"/sys_tb/mst3/u_dcom"
+"/sys_tb/mst3/u_ahb_duart_mst"
+"/sys_tb/slv4"
+"/sys_tb/slv5"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+

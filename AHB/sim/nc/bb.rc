@@ -1,0 +1,151 @@
+Magic 271485
+Revision 2008.04
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 0 1276 946 385 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/python/MyDocument/ab/sim/nc/wave.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 3
+
+; windowTimeUnit is used for zoom, cursor & marker
+windowTimeUnit 1us
+
+; waveform viewport range
+zoom 0.000000 0.711290 1u
+cursor 0.13889618159
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name
+; visible top row signal index
+top 0
+; marker line index
+markerPos 66
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/python/MyDocument/ab/sim/nc/wave.fsdb"
+addSignal -h 15 /sys_tb/amba_ahb/u_arbiter/HCLK
+addSignal -h 15 -holdScope HRST_N
+addSignal -h 15 -holdScope HBUSREQ[3]
+addSignal -h 15 -holdScope HBUSREQ[2]
+addSignal -h 15 -holdScope HBUSREQ[1]
+addSignal -h 15 -holdScope HBUSREQ[0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HTRANS[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HBURST[2:0]
+addSignal -h 15 -holdScope HLOCK
+addSignal -h 15 -holdScope HREADY
+addSignal -h 15 -UNSIGNED -HEX -holdScope HRESP[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HSPLIT[15:0]
+addGroup "G12"
+addSignal -h 15 /sys_tb/amba_ahb/u_arbiter/DefaultMst
+addSignal -h 15 -holdScope DefaultSlv
+addSignal -h 15 -holdScope HlockAddr
+addSignal -h 15 -holdScope Deadlock
+addSignal -h 15 -holdScope RequireArbiter
+addSignal -h 15 -UNSIGNED -HEX -holdScope CurrentMaster[3:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope NextMaster[3:0]
+addGroup "G2"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/amba_ahb/u_arbiter/HGRANT[15:0]
+addSignal -h 15 -holdScope HMASTERLOCK
+addSignal -h 15 -UNSIGNED -HEX -holdScope HMASTER[3:0]
+addGroup "G3"
+addGroup "G4"
+addSignal -h 15 /sys_tb/amba_ahb/u_arbiter/BusreqNoMask[3]
+addSignal -h 15 -holdScope BusreqNoMask[2]
+addSignal -h 15 -holdScope BusreqNoMask[1]
+addSignal -h 15 -holdScope BusreqNoMask[0]
+addGroup "G11"
+addGroup "G6"
+addSignal -h 15 /sys_tb/amba_ahb/HGRANT[2]
+addSignal -h 15 -holdScope HGRANT[1]
+addSignal -h 15 -holdScope HGRANT[0]
+addGroup "G7"
+addSignal -h 15 /sys_tb/dma3/HBUSREQ
+addSignal -h 15 -holdScope HLOCK
+addSignal -h 15 /sys_tb/amba_ahb/HGRANT[3]
+addSignal -h 15 /sys_tb/dma3/Hgrant
+addSignal -h 15 -holdScope HREADY
+addSignal -h 15 -UNSIGNED -HEX -holdScope HRESP[1:0]
+addSignal -h 15 -holdScope AddrPhase
+addSignal -h 15 -holdScope DataPhase
+addSignal -h 15 -holdScope TerminalPhase
+addSignal -h 15 -holdScope RetryPhase
+addGroup "G8"
+addSignal -h 15 -UNSIGNED -HEX /sys_tb/dma3/HADDR[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HSIZE[2:0]
+addSignal -h 15 -holdScope HWRITE
+addSignal -h 15 -UNSIGNED -HEX -holdScope HTRANS[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HBURST[2:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HWDATA[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope HPROT[3:0]
+addGroup "G9"
+addSignal -h 15 /sys_tb/dma3/DataReady
+addSignal -h 15 -UNSIGNED -HEX -holdScope DataOut[31:0]
+addSignal -h 15 -holdScope Error
+addSignal -h 15 -holdScope Grant
+addSignal -h 15 -holdScope Okay
+addSignal -h 15 -holdScope Retry
+addGroup "G10"
+addSignal -h 15 /sys_tb/dma3/Request
+addSignal -h 15 -UNSIGNED -HEX -holdScope Addr[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope Size[2:0]
+addSignal -h 15 -holdScope Burst
+addSignal -h 15 -UNSIGNED -HEX -holdScope DataIn[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope Beat[2:0]
+addSignal -h 15 -holdScope Busy
+addSignal -h 15 -holdScope Lock
+addSignal -h 15 -holdScope Write
+addGroup "G13"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/python/MyDocument/ab/sim/nc/wave.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/sys_tb"
+"/sys_tb/amba_ahb"
+"/sys_tb/amba_ahb/u_arbiter"
+"/sys_tb/amba_ahb/u_mux"
+
+SCOPE_LIST_BEGIN
+"/sys_tb"
+"/sys_tb/amba_ahb/u_mux"
+"/sys_tb/amba_ahb/u_arbiter"
+"/sys_tb/amba_ahb/u_mux/default_slaver"
+"/sys_tb/dma1"
+"/sys_tb/dma0"
+"/sys_tb/dma2"
+"/sys_tb/dma3"
+"/sys_tb/amba_ahb"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+
